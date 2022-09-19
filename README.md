@@ -1,4 +1,4 @@
-This question addresses the statistical multiplexing characteristics of aggregated video traffic stream.  For this purpose, you will be provided with three empirical traces of MPEG video frame sizes.  Your task is to write a simple simulation program of a video multiplexer to produce the results requested in this question.  You may write your simulation in the language of your choice.  
+This project addresses the statistical multiplexing characteristics of aggregated video traffic stream.  For this purpose, you will be provided with three empirical traces of MPEG video frame sizes.  Your task is to write a simple simulation program of a video multiplexer to produce the results requested in this question.  You may write your simulation in the language of your choice.  
 The video multiplexer in your simulation has N input ports, each fed by a different video traffic stream arriving on a link of 45 Mbps transmission capacity.  The multiplexer has a single output port, with link capacity C bps.  At the output port there is buffer of size B cells to store IP Packets waiting to enter the network.
 
 The multiplexer operates as follows.  Each video traffic stream generates and deposits a new video frame into the buffer at a fixed frame rate of 25 frames per second (i.e., a new frame is deposited into the buffer every 40 milliseconds).  For the purpose of simulation, assume that all the packets of the frame arrive back to back at the incoming link rate, and that they have been converted into IP packets from 80 bytes to 120 bytes of frame data (and 20 bytes of IP header) per packet.  Packets that do not fit into the (finite) buffer at the time of packet arrival must be discarded.
@@ -20,5 +20,8 @@ Video	Mean[Mbps]	Var-Parameter[b-s]	Hurst
 Jurassic Park	.327	4.93E-4	.85
 Silence of the Lamps	.183	6.48E-4	.90
 StarWars	.233	7.25E-4	.85
+
+for more details, you can read the following paper: Characterization of effective bandwidth as a metric of quality of service for wired and wireless ATM networks Abbas MohammadiSurinder KumarDavid Klymyshyn IEEE International Conference on Communications (1997) 
+DOI: 10.1109/icc.1997.610034
 
 
